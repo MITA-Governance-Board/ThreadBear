@@ -31,4 +31,4 @@ TODO
 # MITRE
 [MITRE](https://www.mitre.org/) is a not-for-profit company that operates Federally Funded Research and Development Centers (FFRDC).
 
-Cedar was initiated as part of the [CMS Alliance to Modernize Healthcare](https://www.mitre.org/centers/cms-alliances-to-modernize-healthcare/who-we-are) (CAMH) and strives to accelerate the [IHI's Triple AIM](http://www.ihi.org/Engage/Initiatives/TripleAim/Pages/default.aspx) of improved patient care, better population health, and reduced per capita cost in the United States healthcare system.
+ThreadBear was initiated as part of the [CMS Alliance to Modernize Healthcare](https://www.mitre.org/centers/cms-alliances-to-modernize-healthcare/who-we-are) (CAMH) and strives to accelerate the [IHI's Triple AIM](http://www.ihi.org/Engage/Initiatives/TripleAim/Pages/default.aspx) of improved patient care, better population health, and reduced per capita cost in the United States healthcare system.
