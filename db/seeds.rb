@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+sources = JSON.parse(File.read('lib/threadbear/sources.json'))
+sources.each do |source|
+  Source.create!(source)
+end
+
+requirements = JSON.parse(File.read('lib/threadbear/requirements.json'))
+requirements.each do |requirement|
+  Requirement.create!(requirement)
+end
+
+validations = JSON.parse(File.read('lib/threadbear/validations.json'))
+validations.each do |validation|
+  Validation.create!(validation)
+end
