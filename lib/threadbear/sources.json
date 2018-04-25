@@ -1,0 +1,339 @@
+[
+  {
+    "_id": "IBP",
+    "name": "IBP",
+    "type": "Best Practices"
+  },
+  {
+    "_id": "MMIS_BP",
+    "name": "MMIS BP",
+    "type": "Best Practices"
+  },
+  {
+    "_id": "PSM",
+    "name": "PSM",
+    "type": "Best Practices"
+  },
+  {
+    "_id": "MITA_3_0_Ch_4_business_transaction_management",
+    "name": "MITA 3.0 Ch. 4 (business transaction management)",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_Ch_4_Fig_4_3_508_compliance",
+    "name": "MITA 3.0 Ch. 4 Fig. 4-3 (508 compliance)",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_Ch_4_usability",
+    "name": "MITA 3.0 Ch. 4 (usability)",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_IA_ML3",
+    "name": "MITA 3.0 IA ML3",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_TCM_ML2",
+    "name": "MITA 3.0 TCM ML2",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_TCM_ML3",
+    "name": "MITA 3.0 TCM ML3",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_Level_3",
+    "name": "MITA Level 3",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_Level_4",
+    "name": "MITA Level 4",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_ML3_SSA_Appendix_A",
+    "name": "MITA ML3, SS-A Appendix A",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_Part_III_Ch_2_Tech_Mgmt_Strategy",
+    "name": "MITA 3.0, Part III Ch2, Tech Mgmt Strategy",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_Part_III_Ch_7",
+    "name": "MITA 3.0 Part III, Ch. 7",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "MITA_3_0_Part_III_Ch_5_Application_Architecture",
+    "name": "MITA 3.0 Part III, Ch5 Application Architecture",
+    "type": "MITA",
+    "url": "https://www.medicaid.gov/medicaid/data-and-systems/mita/mita-30/index.html"
+  },
+  {
+    "_id": "SMM",
+    "name": "SMM",
+    "type": "Regulatory",
+    "url": "https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/Paper-Based-Manuals-Items/CMS021927.html"
+  },
+  {
+    "_id": "HIPAA",
+    "name": "HIPAA",
+    "type": "Regulatory",
+    "url": "https://www.hhs.gov/hipaa/for-professionals/index.html"
+  },
+  {
+    "_id": "HIPAA_5010",
+    "name": "HIPAA 5010",
+    "type": "Regulatory",
+    "url": "https://www.cms.gov/Regulations-and-Guidance/HIPAA-Administrative-Simplification/Versions5010andD0/Version_5010.html"
+  },
+  {
+    "_id": "Sect_1561_and_1104_of_ACA",
+    "name": "Sect 1561 and 1104 of ACA",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/pkg/BILLS-111hr3590enr/pdf/BILLS-111hr3590enr.pdf"
+  },
+  {
+    "_id": "Section_1115",
+    "name": "Section 1115 of the Social Security Act",
+    "type": "Regulatory",
+    "url": "https://www.ssa.gov/OP_Home/ssact/title11/1115.htm"
+  },
+  {
+    "_id": "Section_1915b",
+    "name": "Section 1915(b) Freedom of Choice (Managed Care) Waivers",
+    "type": "Regulatory",
+    "url": "https://www.ssa.gov/OP_Home/ssact/title19/1915.htm"
+  },
+  {
+    "_id": "Section_1915c",
+    "name": "Section 1915(c) Home and Community-Based Services Waivers",
+    "type": "Regulatory",
+    "url": "https://www.ssa.gov/OP_Home/ssact/title19/1915.htm"
+  },
+  {
+    "_id": "Protecting_Access_to_Medicare_Act_PAMA_HHS_Final_Rule",
+    "name": "45 CFR, parts 160, 162, and, CMS 0013F, Protecting Access to Medicare Act (PAMA) of 2014; HHS Final Rule",
+    "type": "Regulatory",
+    "url": "https://www.federalregister.gov/documents/2016/06/23/2016-14531/medicare-program-medicare-clinical-diagnostic-laboratory-tests-payment-system"
+  },
+  {
+    "_id": "45_CFR_162",
+    "name": "45 CFR 162",
+    "type": "Regulatory"
+  },
+  {
+    "_id": "45_CFR_162_1403",
+    "name": "45 CFR 162.1403",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2011-title45-vol1/CFR-2011-title45-vol1-sec162-1403"
+  },
+  {
+    "_id": "45_CFR_164_208_7_i_and_45_CFR_164_208_7_ii",
+    "name": "45 CFR 164.208(7)(i) and 45 CFR 164.208(7)(ii)",
+    "type": "Regulatory"
+  },
+  {
+    "_id": "45_CFR_164_310",
+    "name": "45 CFR 164.310",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2011-title45-vol1/CFR-2011-title45-vol1-sec164-310"
+  },
+  {
+    "_id": "45_CFR_164_308_a_ii_B_and_45_CFR_164_308_a_3_i",
+    "name": "45 CFR 164.308(a) (ii) (B) and 45 CFR 164.308(a) (3) (i)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308",
+    "name": "45 CFR 164.308",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_4_i",
+    "name": "45 CFR 164.308(a) (4) (i)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_3_ii_A",
+    "name": "45 CFR 164.308(a) (3) (ii) (A)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_5_i_D",
+    "name": "45 CFR 164.308(a) (5) (i) (D)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_5_ii_B",
+    "name": "45 CFR 164.308(a) (5) (ii) (B)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_6_i_and_45_CFR_164_308_a_6_ii",
+    "name": "45 CFR 164.308(a) (6) (i) and 45 CFR 164.308(a) (6) (ii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_6_ii",
+    "name": "45 CFR 164.308(a) (6) (ii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_a_7_ii_C",
+    "name": "45 CFR 164.308(a) (7) (ii) (C)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_308_5_i",
+    "name": "45 CFR 164.308(5) (i)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+  },
+  {
+    "_id": "45_CFR_164_310_a_2_iii",
+    "name": "45 CFR 164.310(a) (2) (iii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-310"
+  },
+  {
+    "_id": "45_CFR_164_312_a_i",
+    "name": "45 CFR 164.312(a) (i)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_a_2_i_and_45_CFR_164_312_d",
+    "name": "45 CFR 164.312(a) (2) (i) and 45 CFR 164.312(d)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_a_2_ii",
+    "name": "45 CFR 164.312(a) (2) (ii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_a_2_iii",
+    "name": "45 CFR 164.312(a) (2) (iii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_a_2_iv",
+    "name": "45 CFR 164.312(a) (2) (iv)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_b",
+    "name": "45 CFR 164.312(b)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_c_1_and_45_CFR_164_312_d_2_i",
+    "name": "45 CFR 164.312(c) (1) and 45 CFR 164.312(d)(2)(i)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_e_1",
+    "name": "45 CFR 164.312(e) (1)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_312_e_2_ii",
+    "name": "45 CFR 164.312(e) (2) (ii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+  },
+  {
+    "_id": "45_CFR_164_502_c",
+    "name": "45 CFR 164.502(c)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-502"
+  },
+  {
+    "_id": "45_CFR_164_522_a_1_iii",
+    "name": "45 CFR 164.522(a) (1) (iii)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-522"
+  },
+  {
+    "_id": "45_CFR_164_524_b_1_and_45_CFR_164_524_a_1",
+    "name": "45 CFR 164.524(b) (1) and 45 CFR 164.524(a)(1)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-524"
+  },
+  {
+    "_id": "45_CFR_164_524_c",
+    "name": "45 CFR 164.524(c)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-524"
+  },
+  {
+    "_id": "45_CFR_164_526_a_1_and_45_CFR_164_526_b_1_and_45_CFR_164_526_c_1",
+    "name": "45 CFR 164.526(a) (1) 45 CFR 164.526(b) (1) and 45 CFR 164.526(c) (1)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-526"
+  },
+  {
+    "_id": "45_CFR_164_528_a_3_and_45_CFR_164_528_b",
+    "name": "45 CFR 164.528(a) (3) and 45 CFR 164.528(b)",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-528"
+  },
+  {
+    "_id": "42_CFR_431_105",
+    "name": "42 CFR 431.105",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-105"
+  },
+  {
+    "_id": "42_CFR_431_304",
+    "name": "42 CFR 431.304",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-304"
+  },
+  {
+    "_id": "42_CFR_431_305",
+    "name": "42 CFR 431.305",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-305"
+  },
+  {
+    "_id": "42_CFR_433_37",
+    "name": "42 CFR 433.37",
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec433-37"
+  }
+]

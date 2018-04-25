@@ -1,0 +1,106 @@
+[{
+    "id": "PS_EIN",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications for organizations contain EINs",
+    "expected_result": "For every 'resourceType' of 'Organization' in a provider screening application, verify that the associated 'identifier' array contains a hash with a 'system' of '2.16.840.1.113883.4.4' and a corresponding 'value' is present with a valid string",
+    "requirement_ids": ["mect2.2_PM.PR3.1"]
+  },
+  {
+    "id": "PS_EFT",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain an indicator for EFT acceptance",
+    "expected_result": "TODO: EFT indicators are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR3.10"]
+  },
+  {
+    "id": "PS_Electronic_Claims",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain an indicator for electronic claims acceptance",
+    "expected_result": "TODO: electronic claims acceptance indicators are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR3.10"]
+  },
+  {
+    "id": "PS_PName",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider names are appropriately stored in Provider Screening applications",
+    "expected_result": "For every 'resourceType' of 'Practicioner' in a provider screening application, verify that the corresponding 'name' array contains a hash for both the 'family' name and 'given' name and that both are valid strings.",
+    "requirement_ids": ["mect2.2_PM.PR1.11"]
+  },
+  {
+    "id": "PS_OName",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider organization names are appropriately stored in Provider Screening applications",
+    "expected_result": "For every 'resourceType' of 'Organization' in a provider screening application, verify that the corresponding value of 'name' is present and contains a valid string.",
+    "requirement_ids": ["mect2.2_PM.PR1.11"]
+  },
+  {
+    "id": "PS_Duplicate",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Disallow duplicate provider screening applications",
+    "expected_result": "An attempt to POST a new application for a provider that is already in the system results in a 4xx error, preferably 422",
+    "requirement_ids": ["mect2.2_PM.PR1.4"]
+  },
+  {
+    "id": "PS_Update",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Allow updates on Provider Screening applications",
+    "expected_result": "An attempt to PUT modifications on an existing Provider Screening record results in a 200",
+    "requirement_ids": ["mect2.2_PM.PR3.3"]
+  },
+  {
+    "id": "PS_Versioning",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Retrieve history of a Provider Screening application",
+    "expected_result": "An attempt to GET previous versions of a provider screening application (GET [base]/Task/[id]/_history/[vid) returns a valid provider screening application",
+    "requirement_ids": ["mect2.2_PM.PR3.6", "mect2.2_PM.PR3.6"]
+  },
+  {
+    "id": "PS_Notifications",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider screening notifications are available",
+    "expected_result": "TODO: notifications are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR1.8", "mect2.2_EE.PR1.1", "mect2.2_PM.PR1.5"]
+  },
+  {
+    "id": "PS_Enrollment_Dates",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain enrollment dates",
+    "expected_result": "TODO: enrollment dates are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR1.7"]
+  },
+  {
+    "id": "PS_Demographic",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain demographic data",
+    "expected_result": "TODO: provider demographic information is not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR1.7"]
+  },
+  {
+    "id": "PS_NPI",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain an NPI",
+    "expected_result": "At least one of the 'Practicioner' records returned is associated with an 'identifier' hash that contains a 'system' of 'http://hl7.org/fhir/sid/us-npi' and a 'value' that contains a valid NPI number",
+    "requirement_ids": ["mect2.2_PM.PR2.1"]
+  },
+  {
+    "id": "PS_Applications",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider screening applications are returned ",
+    "expected_result": "A GET request for all Tasks (TODO: limit according to the Task definition) returns at least one valid provider sceening application",
+    "requirement_ids": ["mect2.2_PSM.PR3.13", "mect2.2_PSM.PR3.11"]
+  },
+  {
+    "id": "PS_DEA",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain DEA numbers",
+    "expected_result": "TODO: DEA numbers are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR3.7"]
+  },
+  {
+    "id": "PS_Appeals",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening application appeals are available",
+    "expected_result": "TODO: Appeals are not yet specified for the PSM",
+    "requirement_ids": ["mect2.2_PM.PR1.6", "mect2.2_PSM.PR3.12"]
+  }
+]

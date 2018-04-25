@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  description: MyString
+  version: MyString
+  checklist: MyString
+  checklist_type: MyString
+  checklist_id: MyString
+  checklist_category: MyString
+  additional_manual_testing: MyString
+
+two:
+  id: MyString
+  description: MyString
+  version: MyString
+  checklist: MyString
+  checklist_type: MyString
+  checklist_id: MyString
+  checklist_category: MyString
+  additional_manual_testing: MyString
