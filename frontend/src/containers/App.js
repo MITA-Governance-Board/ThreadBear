@@ -10,15 +10,15 @@ import resourceAction from '../actions/resourceAction';
 class App extends Component {
 
   componentDidMount(){
-    this.props.list()
-    this.props.get('5ae0f0b50a888182da11c67f')
+    this.props.listSources()
+    this.props.listRequirements()
   }
 
   render() {
     return (
       <div className="App">
-        {this.props.tests.map(t => {
-          return <div key={t._id.$oid}> {t.name} </div>
+        {this.props.sources.map(t => {
+          return <div key={t.id}> {t.name}: {t.type} </div>
         })}
       </div>
     );
@@ -26,12 +26,19 @@ class App extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(resourceAction('tests', ['list', 'get']), dispatch);
+  const source = resourceAction('sources', ['list', 'get']);
+  const requirement = resourceAction('requirements', ['list', 'get']);
+  return bindActionCreators({
+    listSources: source.list,
+    listRequirements: requirement.list,
+    getRequirement: requirement.get
+  }, dispatch);
 }
 
 function mapStateToProps(state) {
   return {
-    tests: _.values(state.test)
+    sources: _.values(state.source),
+    requirements: _.values(state.requirement)
   }
 };
 

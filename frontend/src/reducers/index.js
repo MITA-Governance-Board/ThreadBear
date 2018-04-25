@@ -5,7 +5,8 @@ import resourceReducer from './resourceReducer';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  test:  resourceReducer('tests')
+  source:  resourceReducer('sources'),
+  requirement:  resourceReducer('requirements')
 });
 
 export default rootReducer;
