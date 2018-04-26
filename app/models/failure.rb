@@ -6,7 +6,6 @@ class Failure
   field :description,           type: String
   field :mitigation,            type: String
   field :severity,              type: String
-  field :alternative_evidence,  type: String
 
   belongs_to :validation_instance
 end
