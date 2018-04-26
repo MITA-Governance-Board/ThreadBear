@@ -1,0 +1,31 @@
+inherit_from: .rubocop_todo.yml
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'lib/threadbear/*.json'
+Rails:
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Metrics/LineLength:
+  Max: 150
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
+Metrics/ClassLength:
+  Max: 200
+  Exclude:
+    - 'test/**/*'
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 32
+  Exclude:
+    - 'test/**/*'
+# Avoid complex methods.
+Metrics/CyclomaticComplexity:
+  Max: 10
+Style/GuardClause:
+  MinBodyLength: 100
+Style/HashSyntax:
+  UseHashRocketsWithSymbolValues: false
