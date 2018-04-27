@@ -1,1 +1,5 @@
 # Individual overrides for files that will fail cops
+
+# Symbols are fine in arrays
+Style/SymbolArray:
+  Enabled: false
