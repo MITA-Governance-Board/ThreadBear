@@ -849,7 +849,7 @@
     "checklist_type": "Technical",
     "checklist_category": "Security and Privacy",
     "checklist_id": "TA.SP.46",
-    "source_ids": ["45_CFR_164_208_7_i_and_45_CFR_164_208_7_ii"],
+    "source_ids": ["45_CFR_164_308_7_i_and_45_CFR_164_308_7_ii"],
     "additional_manual_testing": "",
     "critical": false
   },

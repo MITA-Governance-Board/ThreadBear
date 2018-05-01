@@ -138,203 +138,204 @@
     "_id": "45_CFR_162",
     "name": "45 CFR 162",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2004-title45-vol1/CFR-2004-title45-vol1-part162"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?tpl=/ecfrbrowse/Title45/45cfr162_main_02.tpl"
   },
   {
     "_id": "45_CFR_162_1403",
     "name": "45 CFR 162.1403",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2011-title45-vol1/CFR-2011-title45-vol1-sec162-1403"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?SID=da3e9c129ca264d9d74c94539de90adb&mc=true&node=se45.1.162_11403&rgn=div8"
   },
   {
-    "_id": "45_CFR_164_208_7_i_and_45_CFR_164_208_7_ii",
-    "name": "45 CFR 164.208(7)(i) and 45 CFR 164.208(7)(ii)",
-    "type": "Regulatory"
+    "_id": "45_CFR_164_308_7_i_and_45_CFR_164_308_7_ii",
+    "name": "45 CFR 164.308(7)(i) and 45 CFR 164.308(7)(ii)",
+    "type": "Regulatory",
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_310",
     "name": "45 CFR 164.310",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2011-title45-vol1/CFR-2011-title45-vol1-sec164-310"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1310"
   },
   {
     "_id": "45_CFR_164_308_a_ii_B_and_45_CFR_164_308_a_3_i",
     "name": "45 CFR 164.308(a) (ii) (B) and 45 CFR 164.308(a) (3) (i)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308",
     "name": "45 CFR 164.308",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_4_i",
     "name": "45 CFR 164.308(a) (4) (i)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_3_ii_A",
     "name": "45 CFR 164.308(a) (3) (ii) (A)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_5_i_D",
     "name": "45 CFR 164.308(a) (5) (i) (D)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_5_ii_B",
     "name": "45 CFR 164.308(a) (5) (ii) (B)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_6_i_and_45_CFR_164_308_a_6_ii",
     "name": "45 CFR 164.308(a) (6) (i) and 45 CFR 164.308(a) (6) (ii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_6_ii",
     "name": "45 CFR 164.308(a) (6) (ii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_a_7_ii_C",
     "name": "45 CFR 164.308(a) (7) (ii) (C)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_308_5_i",
     "name": "45 CFR 164.308(5) (i)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-308"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=085aeac859c13297d9899042af1bf387&mc=true&n=sp45.1.164.c&r=SUBPART&ty=HTML#se45.1.164_1308"
   },
   {
     "_id": "45_CFR_164_310_a_2_iii",
     "name": "45 CFR 164.310(a) (2) (iii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-310"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1310"
   },
   {
     "_id": "45_CFR_164_312_a_i",
     "name": "45 CFR 164.312(a) (i)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_a_2_i_and_45_CFR_164_312_d",
     "name": "45 CFR 164.312(a) (2) (i) and 45 CFR 164.312(d)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_a_2_ii",
     "name": "45 CFR 164.312(a) (2) (ii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_a_2_iii",
     "name": "45 CFR 164.312(a) (2) (iii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_a_2_iv",
     "name": "45 CFR 164.312(a) (2) (iv)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_b",
     "name": "45 CFR 164.312(b)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_c_1_and_45_CFR_164_312_d_2_i",
     "name": "45 CFR 164.312(c) (1) and 45 CFR 164.312(d)(2)(i)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_e_1",
     "name": "45 CFR 164.312(e) (1)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_312_e_2_ii",
     "name": "45 CFR 164.312(e) (2) (ii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-312"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1312"
   },
   {
     "_id": "45_CFR_164_502_c",
     "name": "45 CFR 164.502(c)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-502"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1502"
   },
   {
     "_id": "45_CFR_164_522_a_1_iii",
     "name": "45 CFR 164.522(a) (1) (iii)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-522"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1522"
   },
   {
     "_id": "45_CFR_164_524_b_1_and_45_CFR_164_524_a_1",
     "name": "45 CFR 164.524(b) (1) and 45 CFR 164.524(a)(1)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-524"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1524"
   },
   {
     "_id": "45_CFR_164_524_c",
     "name": "45 CFR 164.524(c)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-524"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1524"
   },
   {
     "_id": "45_CFR_164_526_a_1_and_45_CFR_164_526_b_1_and_45_CFR_164_526_c_1",
     "name": "45 CFR 164.526(a) (1) 45 CFR 164.526(b) (1) and 45 CFR 164.526(c) (1)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-526"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1526"
   },
   {
     "_id": "45_CFR_164_528_a_3_and_45_CFR_164_528_b",
     "name": "45 CFR 164.528(a) (3) and 45 CFR 164.528(b)",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2010-title45-vol1/CFR-2010-title45-vol1-sec164-528"
+    "url": "https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=30d166e8f687ec6ff5eea118ee320437&n=pt45.1.164&r=PART&ty=HTML#se45.1.164_1528"
   },
   {
     "_id": "42_CFR_431_105",
     "name": "42 CFR 431.105",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-105"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?SID=537ab210a1fa51387704a35b2b29adad&mc=true&node=se42.4.431_1105&rgn=div8"
   },
   {
     "_id": "42_CFR_431_304",
     "name": "42 CFR 431.304",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-304"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?SID=537ab210a1fa51387704a35b2b29adad&mc=true&node=se42.4.431_1304&rgn=div8"
   },
   {
     "_id": "42_CFR_431_305",
     "name": "42 CFR 431.305",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec431-305"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?SID=537ab210a1fa51387704a35b2b29adad&mc=true&node=se42.4.431_1305&rgn=div8"
   },
   {
     "_id": "42_CFR_433_37",
     "name": "42 CFR 433.37",
     "type": "Regulatory",
-    "url": "https://www.gpo.gov/fdsys/granule/CFR-2012-title42-vol4/CFR-2012-title42-vol4-sec433-37"
+    "url": "https://www.ecfr.gov/cgi-bin/text-idx?SID=537ab210a1fa51387704a35b2b29adad&mc=true&node=se42.4.433_137&rgn=div8"
   }
 ]
