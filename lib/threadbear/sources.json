@@ -137,7 +137,8 @@
   {
     "_id": "45_CFR_162",
     "name": "45 CFR 162",
-    "type": "Regulatory"
+    "type": "Regulatory",
+    "url": "https://www.gpo.gov/fdsys/granule/CFR-2004-title45-vol1/CFR-2004-title45-vol1-part162"
   },
   {
     "_id": "45_CFR_162_1403",
