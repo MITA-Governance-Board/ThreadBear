@@ -76,6 +76,13 @@
     "requirement_ids": ["mect2.2_PM.PR1.7"]
   },
   {
+    "id": "PS_Provider_Type",
+    "tags": ["Business Process", "Provider Screening"],
+    "name": "Provider Screening applications contain provider type",
+    "expected_result": "For provider screening application, verify that one of the inputs is of type: text: 'Provider Type' and has an associated 'valueString' with a valid string.",
+    "requirement_ids": ["mect2.2_PM.PR1.7"]
+  },
+  {
     "id": "PS_NPI",
     "tags": ["Business Process", "Provider Screening"],
     "name": "Provider Screening applications contain an NPI",
