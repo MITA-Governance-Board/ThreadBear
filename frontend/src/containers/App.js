@@ -2,24 +2,37 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import _ from 'lodash';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
 
 import './App.css';
 
 import resourceAction from '../actions/resourceAction';
 
-class App extends Component {
+import Sources from './Sources';
+import Requirements from './Requirements';
+import Landing from '../components/Landing';
 
-  componentDidMount(){
-    this.props.listSources()
-    this.props.listRequirements()
+class App extends Component {
+  componentDidMount() {
+    this.props.listSources();
+    this.props.listRequirements();
   }
 
   render() {
     return (
       <div className="App">
-        {this.props.sources.map(t => {
-          return <div key={t.id}> {t.name}: {t.type} </div>
-        })}
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/sources" component={Sources}/>
+            <Route path="/requirements" component={Requirements}/>
+          </Switch>
+        </Router>
       </div>
     );
   }
@@ -39,7 +52,7 @@ function mapStateToProps(state) {
   return {
     sources: _.values(state.source),
     requirements: _.values(state.requirement)
-  }
-};
+  };
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
