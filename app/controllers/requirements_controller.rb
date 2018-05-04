@@ -1,10 +1,10 @@
+# Baseline requirements for testing that may come from various sources
 class RequirementsController < ApplicationController
   before_action :set_requirement, only: [:show, :update, :destroy]
 
   # GET /requirements
   def index
     @requirements = Requirement.all
-
     render json: @requirements
   end
 
@@ -16,7 +16,6 @@ class RequirementsController < ApplicationController
   # POST /requirements
   def create
     @requirement = Requirement.new(requirement_params)
-
     if @requirement.save
       render json: @requirement, status: :created, location: @requirement
     else
@@ -39,13 +38,14 @@ class RequirementsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_requirement
-      @requirement = Requirement.find({_id: params[:id]})
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def requirement_params
-      params.fetch(:requirement, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_requirement
+    @requirement = Requirement.find(id: params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def requirement_params
+    params.fetch(:requirement, {})
+  end
 end
