@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from "./Header"
 import { Container, Divider, Grid, Icon, Segment } from 'semantic-ui-react'
 
 
 export default () => {
   return (
     <div role='main' className='landing'>
-      <Header />
       <Container>
         <Divider hidden />
         <Grid>
