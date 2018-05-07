@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Store from './Store';
 import './index.css';
+import "semantic-ui-css/semantic.css"
 import Root from './containers/Root';
 import registerServiceWorker from './registerServiceWorker';
 

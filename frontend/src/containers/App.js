@@ -5,7 +5,6 @@ import _ from 'lodash';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch
 } from 'react-router-dom'
 
@@ -15,7 +14,10 @@ import resourceAction from '../actions/resourceAction';
 
 import Sources from './Sources';
 import Requirements from './Requirements';
+import NewTest from './NewTest';
+import PastTests from './PastTests';
 import Landing from '../components/Landing';
+import TestDashboard from '../components/TestDashboard';
 
 class App extends Component {
   componentDidMount() {
@@ -29,6 +31,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Route path="/test" component={TestDashboard} />
+            <Route path="/new" component={NewTest} />
+            <Route path="/past" component={PastTests} />
             <Route path="/sources" component={Sources}/>
             <Route path="/requirements" component={Requirements}/>
           </Switch>

@@ -1,28 +1,40 @@
-.App {
+body {
+  background-color: #FEFEFF;
+  font-size: 16px;
+  min-width: 800px;
+}
+.landing {
+  background-image: url("../images/ThreadBear_bg.png"), url("../images/poplin_bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right bottom;
+  background-attachment: fixed, fixed;
+  height: 100vh;
+}
+.ui.segments .segment, .ui.segment {
+  font-size: 16px;
+}
+.header {
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.headerTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  line-height: 34px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  left: 5px;
+  font-weight: 100;
+}
+.homeLink {
+  color: black;
+  text-decoration: none;
+}
+.checklistTitle {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.testTabs .secondary.menu {
+  font-size: 18px;
 }
