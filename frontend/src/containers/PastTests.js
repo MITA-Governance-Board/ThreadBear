@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../components/Header"
-import { Button, Card, Container } from 'semantic-ui-react'
+import { Button, Card, Container, Label } from 'semantic-ui-react'
 
 
 export default () => {
@@ -14,7 +14,10 @@ export default () => {
             <Card.Content>
               <Card.Header>PSM Test Server</Card.Header>
               <Card.Meta>May 1, 2018 1:08pm</Card.Meta>
-              <Card.Description>Some kind of visualization showing aggregated test results?</Card.Description>
+              <Card.Description>
+                <Label basic>Provider Screening</Label>
+                <Label basic>MECT Technical</Label>
+              </Card.Description>
             </Card.Content>
             <Card.Content extra>
               <div className='ui two buttons'>
@@ -27,7 +30,10 @@ export default () => {
             <Card.Content>
               <Card.Header>PSM Test Server</Card.Header>
               <Card.Meta>April 15, 2018 4:33pm</Card.Meta>
-              <Card.Description>Some kind of visualization showing aggregated test results?</Card.Description>
+              <Card.Description>
+                <Label basic>Provider Screening</Label>
+                <Label basic>MECT Technical</Label>
+              </Card.Description>
             </Card.Content>
             <Card.Content extra>
               <div className='ui two buttons'>
@@ -40,7 +46,9 @@ export default () => {
             <Card.Content>
               <Card.Header>Localhost</Card.Header>
               <Card.Meta>April 11, 2018 10:09am</Card.Meta>
-              <Card.Description>Some kind of visualization showing aggregated test results?</Card.Description>
+              <Card.Description>
+                <Label basic>MECT Technical</Label>
+              </Card.Description>
             </Card.Content>
             <Card.Content extra>
               <div className='ui two buttons'>

@@ -7,7 +7,7 @@ export default () => {
     <div role='main' className='landing'>
       <Container>
         <Divider hidden />
-        <Grid>
+        <Grid className='landingContent'>
           <Grid.Row centered columns={2}>
             <Grid.Column textAlign='center'>
               <h1>Welcome to ThreadBear!</h1>

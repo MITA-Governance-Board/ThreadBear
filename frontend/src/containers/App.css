@@ -10,6 +10,9 @@ body {
   background-attachment: fixed, fixed;
   height: 100vh;
 }
+.ui.grid.landingContent {
+  margin-top: 15vh;
+}
 .ui.segments .segment, .ui.segment {
   font-size: 16px;
 }

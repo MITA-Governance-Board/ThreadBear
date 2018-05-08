@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Divider, Popup } from 'semantic-ui-react'
+import { Button, Container, Divider } from 'semantic-ui-react'
 
 // TODO: link the 'previous test' icon to a menu for previous tests
 // TODO: Make the refresh icon re-run the current test
