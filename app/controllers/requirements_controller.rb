@@ -1,5 +1,5 @@
 class RequirementsController < ApplicationController
-  before_action :set_requirement, only: [:show, :update, :destroy]
+  before_action :set_requirement, only: [:show, :update, :destroy, :execute]
 
   # GET /requirements
   def index
@@ -38,10 +38,18 @@ class RequirementsController < ApplicationController
     @requirement.destroy
   end
 
+  def execute 
+    @requirement.validations.each do |v| 
+      "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir').run()
+
+    end
+    render json: @requirement.validations
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_requirement
-      @requirement = Requirement.find({_id: params[:id]})
+      @requirement = Requirement.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
