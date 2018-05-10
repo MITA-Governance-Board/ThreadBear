@@ -4,7 +4,6 @@ class ValidationsController < ApplicationController
   # GET /validations
   def index
     @validations = Validation.all
-
     render json: @validations
   end
 
@@ -16,7 +15,6 @@ class ValidationsController < ApplicationController
   # POST /validations
   def create
     @validation = Validation.new(validation_params)
-
     if @validation.save
       render json: @validation, status: :created, location: @validation
     else
@@ -39,13 +37,14 @@ class ValidationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_validation
-      @validation = Validation.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def validation_params
-      params.fetch(:validation, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_validation
+    @validation = Validation.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def validation_params
+    params.fetch(:validation, {})
+  end
 end

@@ -4,7 +4,6 @@ class SourcesController < ApplicationController
   # GET /sources
   def index
     @sources = Source.all
-
     render json: @sources
   end
 
@@ -16,7 +15,6 @@ class SourcesController < ApplicationController
   # POST /sources
   def create
     @source = Source.new(source_params)
-
     if @source.save
       render json: @source, status: :created, location: @source
     else
@@ -39,13 +37,14 @@ class SourcesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_source
-      @source = Source.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def source_params
-      params.fetch(:source, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_source
+    @source = Source.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def source_params
+    params.fetch(:source, {})
+  end
 end
