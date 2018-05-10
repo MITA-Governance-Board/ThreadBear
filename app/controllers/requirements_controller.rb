@@ -37,10 +37,10 @@ class RequirementsController < ApplicationController
     @requirement.destroy
   end
 
-  def execute 
-    @requirement.validations.each do |v| 
+  def execute
+    @requirement.validations.each do |v|
+      # TODO: Pass in the url instead of hard-coding it here
       "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir').run()
-
     end
     render json: @requirement.validations
   end
@@ -49,7 +49,7 @@ class RequirementsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_requirement
-    @requirement = Requirement.find(id: params[:id])
+    @requirement = Requirement.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

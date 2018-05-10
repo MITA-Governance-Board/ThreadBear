@@ -13,12 +13,12 @@ end
 
 requirements = JSON.parse(File.read('lib/threadbear/requirements.json'))
 requirements.each do |requirement|
-  requirement["id"] = requirement["id"].gsub(".", "_")
+  requirement['id'] = requirement['id'].gsub(/[^a-zA-Z\d\s:]/, '_')
   Requirement.create!(requirement)
 end
 
 validations = JSON.parse(File.read('lib/threadbear/validations.json'))
 validations.each do |validation|
-  validation["requirement_ids"] = validation["requirement_ids"].map { |id| id.gsub(".", "_")}
+  validation['requirement_ids'] = validation['requirement_ids'].map { |id| id.gsub(/[^a-zA-Z\d\s:]/, '_') }
   Validation.create!(validation)
 end

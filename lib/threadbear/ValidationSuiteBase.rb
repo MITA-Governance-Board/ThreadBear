@@ -28,10 +28,10 @@ class ValidationSuiteBase
       end
       validation = Validation.find(@validation_id)
       ValidationInstance.new(
-        :state => result,
-        :url => @url,
-        :validation => validation)
-      .save
+        state: result,
+        url: @url,
+        validation: validation
+      ).save
     end
   end
 end
