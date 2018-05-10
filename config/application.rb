@@ -10,6 +10,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
+Dir[File.dirname(__FILE__) + '/../lib/threadbear/validations/*.rb'].each { |file| file }.each { |file| require file }
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

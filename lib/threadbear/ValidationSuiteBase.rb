@@ -12,7 +12,6 @@ class ValidationSuiteBase
   end
 
   def self.validation(id, &block)
-    puts "Created #{id}_test"
     define_method("#{id}_test") do
       instance_eval &block
     end

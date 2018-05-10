@@ -41,13 +41,10 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-<<<<<<< HEAD
     ast (2.4.0)
     brakeman (4.2.1)
-=======
     bcp47 (0.3.3)
       i18n
->>>>>>> add in validation generation code
     bson (4.3.0)
     builder (3.2.3)
     byebug (10.0.2)
