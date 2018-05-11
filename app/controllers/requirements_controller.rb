@@ -36,12 +36,14 @@ class RequirementsController < ApplicationController
     @requirement.destroy
   end
 
-  def execute
-    @requirement.validations.each do |v|
-      # TODO: Pass in the url instead of hard-coding it here
-      "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir').run()
+  def execute 
+    @requirementInstance = RequirementInstance.create(requirement: @requirement)
+
+    @requirement.validations.each do |v| 
+      # "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir').run()
+
     end
-    render json: @requirement.validations
+    render json: @requirementInstance
   end
 
   private
