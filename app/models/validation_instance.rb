@@ -9,4 +9,6 @@ class ValidationInstance
   belongs_to :validation
   # belongs_to :user
   has_many :failures
+
+  belongs_to :requirement_instance
 end
