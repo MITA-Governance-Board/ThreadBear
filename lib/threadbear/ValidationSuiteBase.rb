@@ -18,6 +18,7 @@ class ValidationSuiteBase
   end
 
   def run
+    instances = []
     methods = self.methods.grep(/_test$/).sort
     methods.each do |method|
       begin
@@ -27,11 +28,15 @@ class ValidationSuiteBase
         result = 'FAIL'
       end
       validation = Validation.find(@validation_id)
-      ValidationInstance.new(
+      instance = ValidationInstance.new(
         state: result,
         url: @url,
         validation: validation
-      ).save
+      )
+      instance.save
+      instances << instance
+      
     end
+    return instances
   end
 end
