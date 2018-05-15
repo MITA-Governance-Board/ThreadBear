@@ -39,12 +39,17 @@ class RequirementsController < ApplicationController
 
   def execute 
     @requirementInstance = RequirementInstance.create(requirement: @requirement)
-
+    validations = []
     @requirement.validations.each do |v| 
-      # "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir').run()
+      validation = "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir')
+       validations.concat(validation.run())
 
     end
-    render json: @requirementInstance
+    @requirementInstance.save
+    
+    @requirementInstance.validation_instances = validations
+    
+    render json: @requirementInstance, include: [:validation_instances]
   end
 
   private
