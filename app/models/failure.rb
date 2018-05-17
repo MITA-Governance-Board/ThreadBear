@@ -3,7 +3,6 @@ class Failure
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :id,            type: String
   field :name,          type: String
   field :description,   type: String
   field :mitigation,    type: String
