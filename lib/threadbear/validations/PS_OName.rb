@@ -5,8 +5,9 @@ class PS_OName_Validation < ValidationSuiteBase
     super(url)
     @validation_id = 'PS_OName'
   end
-  validation 'main' do
+  validation 'Load Tasks' do
     response = @client.search(FHIR::Task)
     assert_response_ok(response)
+    assert_equal(2,3, "Apparently, you need to change the value of 2...")
   end
 end
