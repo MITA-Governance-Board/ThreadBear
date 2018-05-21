@@ -17,6 +17,9 @@ class ValidationSuiteBase
     end
   end
 
+  # Create helper method for creating failures here
+  
+
   def run(validation_instance_id)
     methods = self.methods.grep(/_test$/).sort
     # instance = Validation.find(validation_instance_id)
