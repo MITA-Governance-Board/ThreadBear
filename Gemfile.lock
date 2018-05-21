@@ -49,6 +49,7 @@ GEM
     builder (3.2.3)
     byebug (10.0.2)
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     crass (1.0.4)
     date_time_precision (0.8.1)
     domain_name (0.5.20180417)
@@ -112,22 +113,21 @@ GEM
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-<<<<<<< HEAD
-    parallel (1.12.1)
-    parser (2.5.1.0)
-      ast (~> 2.4.0)
-    powerpack (0.1.1)
-=======
     oauth2 (1.4.0)
       faraday (>= 0.8, < 0.13)
       jwt (~> 1.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
+    parallel (1.12.1)
+    parser (2.5.1.0)
+      ast (~> 2.4.0)
+    powerpack (0.1.1)
     public_suffix (3.0.2)
->>>>>>> add in validation generation code
     puma (3.11.4)
     rack (2.0.5)
+    rack-protection (2.0.1)
+      rack
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -159,6 +159,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
 <<<<<<< HEAD
+<<<<<<< HEAD
     rubocop (0.55.0)
       parallel (~> 1.10)
       parser (>= 2.5)
@@ -168,12 +169,20 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
 =======
+=======
+    redis (4.0.1)
+>>>>>>> added sidekiq, refactored test exec to use workers
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
 >>>>>>> add in validation generation code
     ruby_dep (1.5.0)
+    sidekiq (5.1.3)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -214,7 +223,11 @@ DEPENDENCIES
   mongoid (~> 7.0.0)
   puma (~> 3.7)
   rails (~> 5.1.4)
+<<<<<<< HEAD
   rubocop
+=======
+  sidekiq
+>>>>>>> added sidekiq, refactored test exec to use workers
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

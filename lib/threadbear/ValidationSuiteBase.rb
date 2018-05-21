@@ -17,23 +17,22 @@ class ValidationSuiteBase
     end
   end
 
-  def run
+  def run(validation_instance_id)
     methods = self.methods.grep(/_test$/).sort
-    validation = Validation.find(@validation_id)
-    instance = ValidationInstance.new(
-        url: @url,
-        validation: validation
-      )
+    # instance = Validation.find(validation_instance_id)
     methods.each do |method|
       begin
         self.method(method).call
       rescue AssertionException => e
-        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'failure', validation_instance: instance) 
+        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'failure', validation_instance_id: validation_instance_id) 
       rescue TodoAssertion => e 
-        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'failure', validation_instance: instance)
-      end
-      instance.save     
+        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'skip', validation_instance_id: validation_instance_id)
+      end      
     end
-    return instance
+
+    validation_instance = ValidationInstance.find(validation_instance_id)
+    validation_instance.state = 'complete'
+    validation_instance.save
+
   end
 end

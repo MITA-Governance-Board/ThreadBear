@@ -38,30 +38,19 @@ class RequirementsController < ApplicationController
   end
 
   def execute 
-    @requirement_instance = RequirementInstance.create(requirement: @requirement)
-    validations = []
-    @requirement.validations.each do |v| 
-      validation = "#{v.id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir')
-       validations << validation.run()
 
+    @requirement_instance = RequirementInstance.create(requirement: @requirement)
+    @requirement.validations.each do |v| 
+      ValidationInstance.create!(
+        url: @url,
+        validation: v,
+        requirement_instance: @requirement_instance,
+        state: 'running'
+      )
     end
-    @requirement_instance.save
-    
-    @requirement_instance.validation_instances = validations
-    
-    render json: @requirement_instance, include: {
-      validation_instances: {
-        except: [ :requirement_instance_id, :updated_at, :validation_id ],
-        include: {
-          failures: {
-            except: [:validation_instance_id]
-          },
-          validation: {
-            except: [ :_id ]
-          }
-        }
-      }
-    }
+    worker = RequirementWorker.perform_async(@requirement_instance._id)
+
+    redirect_to @requirement_instance
   end
 
   private
