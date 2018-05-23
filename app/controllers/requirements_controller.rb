@@ -1,6 +1,6 @@
 # Baseline requirements for testing that may come from various sources
 class RequirementsController < ApplicationController
-  before_action :set_requirement, only: [:show, :update, :destroy]
+  before_action :set_requirement, only: [:show, :update, :destroy, :execute]
 
   # GET /requirements
   def index
@@ -37,11 +37,25 @@ class RequirementsController < ApplicationController
     @requirement.destroy
   end
 
+  def execute
+    @requirement_instance = RequirementInstance.create(requirement: @requirement)
+    @requirement.validations.each do |v|
+      ValidationInstance.create!(
+        url: @url,
+        validation: v,
+        requirement_instance: @requirement_instance,
+        state: 'running'
+      )
+    end
+    RequirementWorker.perform_async(@requirement_instance._id)
+    redirect_to @requirement_instance
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_requirement
-    @requirement = Requirement.find(id: params[:id])
+    @requirement = Requirement.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

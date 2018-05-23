@@ -17,4 +17,5 @@
 !/log/.keep
 !/tmp/.keep
 
+*.rdb
 .byebug_history

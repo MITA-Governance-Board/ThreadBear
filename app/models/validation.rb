@@ -1,6 +1,7 @@
 # A validation that can be performed to adjudicate server compliance with a given requirement
 class Validation
   include Mongoid::Document
+
   field :id,                    type: String
   field :tags,                  type: Array
   field :name,                  type: String
