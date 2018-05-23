@@ -4,7 +4,6 @@ class ValidationInstancesController < ApplicationController
   # GET /validation_instances
   def index
     @validation_instances = ValidationInstance.all
-
     render json: @validation_instances
   end
 
@@ -16,7 +15,6 @@ class ValidationInstancesController < ApplicationController
   # POST /validation_instances
   def create
     @validation_instance = ValidationInstance.new(validation_instance_params)
-
     if @validation_instance.save
       render json: @validation_instance, status: :created, location: @validation_instance
     else
@@ -39,13 +37,14 @@ class ValidationInstancesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_validation_instance
-      @validation_instance = ValidationInstance.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def validation_instance_params
-      params.fetch(:validation_instance, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_validation_instance
+    @validation_instance = ValidationInstance.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def validation_instance_params
+    params.fetch(:validation_instance, {})
+  end
 end

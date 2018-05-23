@@ -12,6 +12,7 @@ ThreadBear is a Ruby on Rails application with a React frontend. Wherever possib
   * [Ruby Version Manager](https://rvm.io/)
   * Ruby 2.5.1 (use rvm)
   * [Node Package Manager](https://www.npmjs.com/)
+  * [Redis](https://redis.io/)
 2. Clone this repository
 3. Install node dependencies
   * `cd /frontend`

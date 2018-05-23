@@ -17,8 +17,8 @@ class ValidationSuiteBase
     end
   end
 
-  # Create helper method for creating failures here
-  
+  # TODO: Create helper method for creating failures here
+
 
   def run(validation_instance_id)
     methods = self.methods.grep(/_test$/).sort
@@ -27,15 +27,13 @@ class ValidationSuiteBase
       begin
         self.method(method).call
       rescue AssertionException => e
-        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'failure', validation_instance_id: validation_instance_id) 
-      rescue TodoAssertion => e 
-        Failure.create( name: method.to_s, description: e.to_s, mitigation: nil, severity: 'skip', validation_instance_id: validation_instance_id)
-      end      
+        Failure.create(name: method.to_s, description: e.to_s, mitigation: nil, severity: 'failure', validation_instance_id: validation_instance_id)
+      rescue TodoException => e
+        Failure.create(name: method.to_s, description: e.to_s, mitigation: nil, severity: 'skip', validation_instance_id: validation_instance_id)
+      end
     end
-
     validation_instance = ValidationInstance.find(validation_instance_id)
     validation_instance.state = 'complete'
     validation_instance.save
-
   end
 end

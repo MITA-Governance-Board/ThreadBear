@@ -37,10 +37,9 @@ class RequirementsController < ApplicationController
     @requirement.destroy
   end
 
-  def execute 
-
+  def execute
     @requirement_instance = RequirementInstance.create(requirement: @requirement)
-    @requirement.validations.each do |v| 
+    @requirement.validations.each do |v|
       ValidationInstance.create!(
         url: @url,
         validation: v,
@@ -48,8 +47,7 @@ class RequirementsController < ApplicationController
         state: 'running'
       )
     end
-    worker = RequirementWorker.perform_async(@requirement_instance._id)
-
+    RequirementWorker.perform_async(@requirement_instance._id)
     redirect_to @requirement_instance
   end
 
