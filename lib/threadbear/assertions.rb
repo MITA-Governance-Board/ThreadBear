@@ -13,10 +13,9 @@ module Assertions
     end
   end
 
-  def assert_response_ok(response, error_message="")
-    unless assertion_negated( [200, 201].include?(response.code) )
-      raise AssertionException.new "Bad response code: expected 200, 201, but found #{response.code}.#{" " + error_message}", response.body
-    end
+  def assert_response_ok(response, &block)
+    return if ( [200, 201].include?(response.code) ) 
+    instance_eval &block
   end
 
   def assert_response_not_found(response)

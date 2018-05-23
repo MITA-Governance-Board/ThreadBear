@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import Header from "../components/Header"
-import { Container, Table } from 'semantic-ui-react'
+import _ from 'lodash';
+import { Container, Table } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import _ from 'lodash';
+
+import Header from '../components/Header';
+
 
 import resourceAction from '../actions/resourceAction';
 
@@ -30,7 +32,7 @@ class Requirements extends Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-            {this.props.requirements.map(r => {
+            {this.props.requirements.map((r) => {
               return (
                 <Table.Row>
                   <Table.Cell>{r.version}</Table.Cell>
@@ -40,7 +42,7 @@ class Requirements extends Component {
                   <Table.Cell>{r.description}</Table.Cell>
                   <Table.Cell>{r.additional_manual_testing}</Table.Cell>
                 </Table.Row>
-              )
+              );
             })}
             </Table.Body>
           </Table>

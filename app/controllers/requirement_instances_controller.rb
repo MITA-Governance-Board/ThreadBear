@@ -1,5 +1,5 @@
 class RequirementInstancesController < ApplicationController
-  before_action :set_requirement_instance, only: [:show, :update, :destroy]
+  before_action :set_requirement_instance, only: [:show, :update, :destroy, :new]
 
   # GET /requirement_instances
   def index
