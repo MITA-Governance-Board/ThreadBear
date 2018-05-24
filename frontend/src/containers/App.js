@@ -20,11 +20,6 @@ import Landing from '../components/Landing';
 import TestDashboard from '../components/TestDashboard';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.listSources();
-    this.props.listRequirements();
-  }
-
   render() {
     return (
       <div className="App">

@@ -1,5 +1,6 @@
+db: mongod
 web: cd frontend && PORT=3000 npm start
 api: PORT=3001 && bundle exec rails s
-sidekiq: bundle exec sidekiq
 redis: redis-server
-db: mongod
+sidekiq: bundle exec sidekiq
+

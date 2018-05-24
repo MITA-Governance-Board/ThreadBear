@@ -4,6 +4,6 @@ class RequirementInstance
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  belongs_to :requirement
+  # has_many :requirements
   has_many :validation_instances
 end

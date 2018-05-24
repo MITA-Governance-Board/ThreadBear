@@ -1,11 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import { routerMiddleware } from 'react-router-redux'
 
 
 import rootReducer from './reducers';
 
 export default function configureStore(initState) {
-  const middleware = [thunkMiddleware];
+  const middleware = [thunkMiddleware, routerMiddleware];
 
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle
   const store = createStore(

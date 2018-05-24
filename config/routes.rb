@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :sources
   resources :validations 
   resources :validation_instances, only: [:show]
-  resources :requirement_instances, only: [:show, :create] 
+  resources :requirement_instances, only: [:index, :show, :create] 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 end

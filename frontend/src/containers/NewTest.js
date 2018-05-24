@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { push } from 'react-router-redux';
 
 import _ from 'lodash';
 
@@ -43,8 +44,12 @@ class NewTestContainer extends Component {
   }
 
   handleSubmit = () => {
-    console.log(this.state);
-    this.props.submitNewTest(this.state);
+    this.props.submitNewTest(
+      { requirement_instance: this.state },
+      (data, dispatch) => { 
+        dispatch(push('/'));
+       }
+    );
   }
 
   render() {
@@ -91,7 +96,7 @@ class NewTestContainer extends Component {
                   <label>FHIR Version</label>
                   <Select required name='fhirVersion' value={fhirVersion} onChange={this.handleChange}  options={fhirVersions} />
                 </Form.Field>
-                <Button type="button" fluid content='Test Connection' />
+                <Button disabled type="button" fluid content='Test Connection' />
                 <h2>Tests</h2>
                 <Form.Field>
                   <label>MECT Version</label>
@@ -120,7 +125,7 @@ class NewTestContainer extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    submitNewTest: submitFormAction('requirement_instance', '/requirement_instances/'),
+    submitNewTest: submitFormAction('requirement_instance', '/requirement_instances'),
     listRequirements: resourceAction('requirements', ['list']).list
   }, dispatch);
 }
