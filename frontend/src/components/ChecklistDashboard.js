@@ -25,7 +25,7 @@ const statusDropdown = [
   {text: 'Not Assessed', value: 'Not Assessed'}
 ]
 
-export default () => {
+export default ({ testExecution }) => {
   return (
     <div>
       <ChecklistViz />
@@ -39,7 +39,7 @@ export default () => {
           <Dropdown placeholder='Filter by Status' selection options={statusDropdown}></Dropdown>
         </Menu.Menu>
       </Menu>
-      <RequirementResult />
+      <RequirementResult testExecution={testExecution}/>
     </div>
   );
 }

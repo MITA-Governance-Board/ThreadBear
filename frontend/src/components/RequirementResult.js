@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Form, Grid, Icon, Segment } from 'semantic-ui-react'
-import RequirementResultDetail from "./RequirementResultDetail";
+import {nest} from 'd3-collection';
+import _ from 'lodash';
+
+import { Container, Form, Grid, Icon, Segment } from 'semantic-ui-react';
+import RequirementResultDetail from './RequirementResultDetail';
 
 export default class RequirementResult extends Component {
   state = { visible: false }
@@ -13,14 +16,52 @@ export default class RequirementResult extends Component {
   handleVisibility = () => this.setState({ visible: !this.state.visible })
 
   render() {
-    const { visible } = this.state
 
+    
+    const { visible } = this.state;
+    if (!this.props.testExecution) {
+      return null;
+    }
+    const requirements = _.flatten(this.props.testExecution.validation_instances.map((d) => {
+      return d.validation.requirements.map((r) => {
+        return { requirement: r, validation_instance: d };
+      });
+    }));
+    const rolledRequirements = nest()
+      .key(r => r.requirement.checklist_id)
+      .entries(requirements);    
     return (
       <div>
         <Container>
           <h2 className='checklistTitle'>Checklist Title</h2>
           <h3>Category</h3>
-          <Segment color='red'>
+          {rolledRequirements.map((r) => {
+            return (
+              <Segment key={r.key}>
+                <Grid>
+                  <Grid.Column width={1}>
+                    <Form.Button circular compact icon aria-label='Expand TA.BA.10' content={
+                      visible ? <Icon fitted name='chevron down' /> : <Icon fitted name='chevron right' />}
+                      onClick={this.handleVisibility}
+                    />
+                  </Grid.Column>
+                  <Grid.Column width={2}>{r.key}
+              </Grid.Column>
+                  <Grid.Column width={10}>
+                    {r.values[0].requirement.description}
+              </Grid.Column>
+                  <Grid.Column width={1}>
+                    <Icon name='remove circle' size='big' color='red' />
+                  </Grid.Column>
+                  <Grid.Column>
+                    Doesnt Meet
+              </Grid.Column>
+                </Grid>
+                {visible && r.values.map(v => <RequirementResultDetail key={v.validation_instance._id.$oid} validationInstance={v.validation_instance} requirement={v.requirement}/>)}
+              </Segment>
+            );
+          })}
+          {/* <Segment color='red'>
             <Grid columns='equal' verticalAlign='middle'>
               <Grid.Column width={1}>
                 <Form.Button circular compact icon aria-label='Expand TA.BA.10' content={
@@ -146,7 +187,7 @@ export default class RequirementResult extends Component {
                 In Progress...
               </Grid.Column>
             </Grid>
-          </Segment>
+          </Segment> */}
         </Container>
       </div>
     );

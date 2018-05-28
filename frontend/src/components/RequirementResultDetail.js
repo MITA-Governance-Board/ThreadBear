@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Divider, Header, Grid, Icon } from 'semantic-ui-react'
-
+import { Container, Divider, Header, Grid, Icon } from 'semantic-ui-react';
+import _ from 'lodash';
 // TODO: Fill this with actual data and use conditional renders based on available data
 
-export default () => {
+export default ({ validationInstance, requirement }) => {
   return (
     <div>
       <Container>
@@ -12,12 +12,12 @@ export default () => {
         <Grid columns='equal' verticalAlign='top'>
           <Grid.Row>
             <Grid.Column width={2}>
-              Valid_001
+            {validationInstance.validation.id}
             </Grid.Column>
             <Grid.Column>
-              <strong>Expected Result:</strong> Expected Result text goes here to tell the end user what this automated test is attempting to do.
+              <strong>Expected Result:</strong> {validationInstance.validation.expected_result}
               <br />
-              <strong>Alternative Evidence:</strong> Each validation should include alternative evidence that can be provided if this automated test is not passed.
+              <strong>Alternative Evidence:</strong> {validationInstance.validation.alternative_evidence || 'None Defined'}
             </Grid.Column>
             <Grid.Column width={1}>
               <Icon name='remove circle' size='large' color='red' />
@@ -26,27 +26,33 @@ export default () => {
               Failed
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row>
+          {validationInstance.failures.map(f => <Failure failure={f} />)}
+        </Grid>
+        <Header as='h3' textAlign='center'>Additional Manual Testing Required</Header>
+        {requirement.additional_manual_testing || 'None Defined'}
+        <Divider />
+        <strong>Sources:</strong>
+        {requirement.sources.map(s => <a key={s.id} href={s.url}>{s.name}</a>)}
+      </Container>
+    </div>
+  );
+}
+
+
+const Failure = ({ failure }) => (
+  <Grid.Row>
             <Grid.Column width={2}>
             </Grid.Column>
             <Grid.Column>
-              <strong>Fail_001:</strong> Explain what kind of failure was encountered for this automated test.
+              <strong>{failure.name}:</strong> {failure.description}
               <br />
-              <strong>Possible Mitigation:</strong> If possible, explain how the failure might be fixed.
+              <strong>Possible Mitigation:</strong> {failure.mitigation}
             </Grid.Column>
             <Grid.Column width={1}>
               <Icon name='remove circle' size='large' color='red' />
             </Grid.Column>
             <Grid.Column width={2}>
-              Critical
+              {_.capitalize(failure.severity)}
             </Grid.Column>
           </Grid.Row>
-        </Grid>
-        <Header as='h3' textAlign='center'>Additional Manual Testing Required</Header>
-        If any additional manual testing is required (this should be stored on the requirement), render it here.
-        <Divider />
-        <strong>Sources:</strong> <a href='https://www.ssa.gov/OP_Home/ssact/title11/1115.htm'>Section 1115 of the Social Security Act</a>, <a href='https://www.ssa.gov/OP_Home/ssact/title19/1915.htm'>Section 1915(b) Freedom of Choice (Managed Care) Waivers</a>, <a href='https://www.ssa.gov/OP_Home/ssact/title19/1915.htm'>Section 1915(c) Home and Community-Based Services Waivers</a>
-      </Container>
-    </div>
-  );
-}
+)

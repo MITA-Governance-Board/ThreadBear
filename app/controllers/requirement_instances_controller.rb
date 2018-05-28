@@ -13,7 +13,17 @@ class RequirementInstancesController < ApplicationController
             except: [:validation_instance_id]
           },
           validation: {
-            except: [:_id]
+            except: [:_id],
+            include: {
+              requirements: {
+                except: [:requirement_id],
+                include: {
+                  sources: {
+                    except: [:source_id]
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -30,7 +40,17 @@ class RequirementInstancesController < ApplicationController
             except: [:validation_instance_id]
           },
           validation: {
-            except: [:_id]
+            except: [:_id],
+            include: {
+              requirements: {
+                except: [:requirement_id],
+                include: {
+                  sources: {
+                    except: [:source_id]
+                  }
+                }
+              }
+            }
           }
         }
       }

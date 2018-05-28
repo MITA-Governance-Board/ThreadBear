@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 import './App.css';
 
@@ -17,7 +17,7 @@ import Requirements from './Requirements';
 import NewTest from './NewTest';
 import PastTests from './PastTests';
 import Landing from '../components/Landing';
-import TestDashboard from '../components/TestDashboard';
+import TestDashboard from './TestDashboard';
 
 class App extends Component {
   render() {
@@ -26,7 +26,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route path="/test" component={TestDashboard} />
+            <Route path="/test/:id" component={TestDashboard} />
             <Route path="/new" component={NewTest} />
             <Route path="/past" component={PastTests} />
             <Route path="/sources" component={Sources}/>

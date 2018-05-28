@@ -6,6 +6,8 @@ import _ from 'lodash';
 import moment from 'moment';
 
 import { Button, Card, Container, Label } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 import Header from '../components/Header';
 import resourceAction from '../actions/resourceAction';
 
@@ -47,8 +49,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(PastTestContainer);
 const TestExecution = ({ test }) => {
   return (
     <Card key={test._id.$oid}>
+            
             <Card.Content>
+            <Link to={`/test/${test._id.$oid}`}>
               <Card.Header>Test Execution</Card.Header>
+            </Link>
               <Card.Meta>{moment(test.created_at).fromNow()}</Card.Meta>
               <Card.Description>
                 {test.validation_instances.map(i => <Label key={i._id.$oid}>{i.validation.id}</Label>)}
@@ -60,6 +65,7 @@ const TestExecution = ({ test }) => {
                   <Button disabled basic color='blue'><a href='/test'>Re-Run</a></Button>
               </div>
             </Card.Content>
+            
           </Card>
   );
 };
