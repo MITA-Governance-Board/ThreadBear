@@ -14,10 +14,12 @@ class TestExecutionShow extends Component {
   }
 
   render() {
-    if (!this.props.testExecututions) {
+    if (!this.props.testExecututions && !this.props.testExecututions[this.props.match.params.id]) {
       return null;
     }
     const testExecution = this.props.testExecututions[this.props.match.params.id];
+
+    
 
     const panes = [
       { menuItem: 'MECT Checklists', render: () => <Tab.Pane><ChecklistDashboard testExecution={testExecution}/></Tab.Pane> },

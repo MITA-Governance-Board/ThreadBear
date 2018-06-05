@@ -36,7 +36,7 @@ export default ({ validationInstance, requirement }) => {
       </Container>
     </div>
   );
-}
+};
 
 
 const Failure = ({ failure }) => (
