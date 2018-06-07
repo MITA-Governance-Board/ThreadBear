@@ -2,7 +2,7 @@
 - Collection of Test Runs
   - Server Name
   - Date
-  - Tags
+  - Checklists
 
 ## Test Run Show - UI Data Needs
 - Server Name

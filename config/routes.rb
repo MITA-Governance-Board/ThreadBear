@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
   resources :sources
+  resources :test_executions, only: [:show, :index]
   resources :validations 
   resources :validation_instances, only: [:show]
   resources :requirement_instances, only: [:index, :show, :create] 
