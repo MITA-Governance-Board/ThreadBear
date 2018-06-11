@@ -32,6 +32,7 @@ before_action :set_requirement_instance, only: [:show]
         test_exec.tags = []
         test_exec.sources = []
         test_exec.manual_testing = []  
+        validations = []
         requirement_instance.validation_instances.map do |vi| 
             vi.validation.requirements.map do |r| 
                 checklist = Checklist.new()
@@ -42,16 +43,17 @@ before_action :set_requirement_instance, only: [:show]
                 test_exec.checklists << checklist
                 test_exec.manual_testing << {id: r.id, testing: r.additional_manual_testing}
                 test_exec.sources << r.sources
-                
+                validations << vi.validation
             end
             test_exec.tags << vi.validation.tags
+            test_exec.validations = validations
         end
         test_exec.execution_date = requirement_instance.created_at
         test_exec.checklists = test_exec.checklists.flatten.uniq{|c| c.requirement}.group_by{|c| c.category}
         test_exec.tags = test_exec.tags.flatten.uniq
         test_exec.sources = test_exec.sources.flatten.uniq{|s| s.name}
         test_exec.manual_testing = test_exec.manual_testing.flatten.select{|t| t[:testing].length > 0}.uniq
-
+        test_exec.requirements = requirement_instance.validation_instances.map{|vi| vi.validation.requirements}.flatten.uniq{|r| r.id}
         return test_exec
     end
 end
@@ -65,14 +67,15 @@ class TestExecution
         :tags,
         :sources,
         :manual_testing,
-        :checklists
+        :checklists,
+        :validations,
+        :requirements
     end
 
 class Checklist 
     attr_accessor :name, 
         :category,
         :description,
-        :validations,
         :failures,
         :requirement
 end
