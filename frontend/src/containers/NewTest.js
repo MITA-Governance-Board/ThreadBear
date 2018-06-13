@@ -32,7 +32,7 @@ const fhirVersions = [
 // ];
 
 class NewTestContainer extends Component {
-  state = { serverName: '', url: '', fhirVersion: fhirVersions[0].value, tests: [], mectVersion: null }
+  state = { serverName: '', serverUrl: '', fhirVersion: fhirVersions[0].value, tests: [], mectVersion: null }
   mectVersions = []
   testList = []
   componentDidMount() {
@@ -46,14 +46,14 @@ class NewTestContainer extends Component {
   handleSubmit = () => {
     this.props.submitNewTest(
       { requirement_instance: this.state },
-      (data, dispatch) => { 
+      (data, dispatch) => {
         dispatch(push('/'));
-       }
+      }
     );
   }
 
   render() {
-    const { serverName, url, fhirVersion, mectVersion, tests } = this.state;
+    const { serverName, serverUrl, fhirVersion, mectVersion, tests } = this.state;
     const { requirements } = this.props;
     const mectVersions = [...new Set(_.values(requirements).map(r => r.version))].map((version) => {
       return {
@@ -90,11 +90,11 @@ class NewTestContainer extends Component {
                 </Form.Field>
                 <Form.Field>
                   <label>Server URL</label>
-                  <Input required name='url' value={url} onChange={this.handleChange} fluid placeholder='http://example.com/fhir' aria-label='Server URL' />
+                  <Input required name='serverUrl' value={serverUrl} onChange={this.handleChange} fluid placeholder='http://example.com/fhir' aria-label='Server URL' />
                 </Form.Field>
                 <Form.Field>
                   <label>FHIR Version</label>
-                  <Select required name='fhirVersion' value={fhirVersion} onChange={this.handleChange}  options={fhirVersions} />
+                  <Select required name='fhirVersion' value={fhirVersion} onChange={this.handleChange} options={fhirVersions} />
                 </Form.Field>
                 <Button disabled type="button" fluid content='Test Connection' />
                 <h2>Tests</h2>

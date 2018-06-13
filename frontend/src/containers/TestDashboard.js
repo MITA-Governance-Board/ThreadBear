@@ -8,18 +8,16 @@ import ChecklistDashboard from '../components/ChecklistDashboard';
 import resourceAction from '../actions/resourceAction';
 
 class TestExecutionShow extends Component {
-
   componentDidMount() {
     this.props.getTestExecution(this.props.match.params.id);
   }
 
   render() {
-    if (!this.props.testExecututions && !this.props.testExecututions[this.props.match.params.id]) {
+    if (!this.props.testExecutions) {
       return null;
     }
-    const testExecution = this.props.testExecututions[this.props.match.params.id];
+    const testExecution = this.props.testExecutions[this.props.match.params.id];
 
-    
 
     const panes = [
       { menuItem: 'MECT Checklists', render: () => <Tab.Pane><ChecklistDashboard testExecution={testExecution}/></Tab.Pane> },
@@ -27,11 +25,11 @@ class TestExecutionShow extends Component {
       { menuItem: 'Security', render: () => <Tab.Pane>Nothing to see here. Move along...</Tab.Pane> },
       { menuItem: 'Performance', render: () => <Tab.Pane>Nothing to see here. Move along...</Tab.Pane> },
     ];
-
+    if (!testExecution) return null;
     return (
       <div role='main'>
         <Header />
-        <ServerTest />
+        <ServerTest testExecution={testExecution} />
         <Container>
           <Tab
             menu={{ secondary: true, pointing: true }}
@@ -42,19 +40,18 @@ class TestExecutionShow extends Component {
       </div>
     );
   }
-  
 }
 
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    getTestExecution: resourceAction('requirement_instances', ['get']).get
+    getTestExecution: resourceAction('test_executions', ['get']).get
   }, dispatch);
 }
 
 function mapStateToProps(state) {
   return {
-    testExecututions: state.requirementInstance
+    testExecutions: state.testExecutions
   };
 }
 

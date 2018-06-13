@@ -24,7 +24,7 @@ before_action :set_requirement_instance, only: [:show]
 
     def build_test_execution(requirement_instance)
         test_exec = TestExecution.new
-        test_exec.requirement_instance_id = requirement_instance.id
+        test_exec._id = requirement_instance.id
         test_exec.server_name = requirement_instance.server_name
         test_exec.server_url = requirement_instance.server_url
         
@@ -48,8 +48,12 @@ before_action :set_requirement_instance, only: [:show]
             test_exec.tags << vi.validation.tags
             test_exec.validations = validations
         end
+        test_exec.validation_instances = requirement_instance.validation_instances
         test_exec.execution_date = requirement_instance.created_at
-        test_exec.checklists = test_exec.checklists.flatten.uniq{|c| c.requirement}.group_by{|c| c.category}
+        test_exec.checklists = test_exec.checklists.flatten.uniq{|c| c.requirement}.group_by{|c| c.name}
+        test_exec.checklists.map do |k, v|
+            test_exec.checklists[k] = v.group_by{|c| c.category}
+        end
         test_exec.tags = test_exec.tags.flatten.uniq
         test_exec.sources = test_exec.sources.flatten.uniq{|s| s.name}
         test_exec.manual_testing = test_exec.manual_testing.flatten.select{|t| t[:testing].length > 0}.uniq
@@ -60,7 +64,7 @@ end
 
 
 class TestExecution 
-    attr_accessor :requirement_instance_id,
+    attr_accessor :_id,
         :server_name, 
         :server_url, 
         :execution_date,
@@ -69,7 +73,8 @@ class TestExecution
         :manual_testing,
         :checklists,
         :validations,
-        :requirements
+        :requirements,
+        :validation_instances
     end
 
 class Checklist 
@@ -77,7 +82,33 @@ class Checklist
         :category,
         :description,
         :failures,
-        :requirement
+        :requirement,
+        :state
+        def set_state
+            unless validation_instances
+              update_attribute(:state, 'Not Assessed')
+              return
+            end
+            instance_states = validation_instances.map do |instance|
+              instance.state
+            end
+            # byebug
+            if instance_states.include? 'running'
+              update_attribute(:state, 'In Progress')
+              return
+            elsif !instance_states.include? 'passed'
+              update_attribute(:state, "Doesn't Meet")
+              return
+            elsif instance_states.include? 'failed'
+              update_attribute(:state, 'Partially Meets')
+              return
+            elsif self.requirement.additional_manual_testing.present?
+              update_attribute(:state, 'Manual Testing Required')
+              return
+            else
+              update_attribute(:state, 'Meets')
+            end
+          end
 end
 
 class ChecklistValidation 

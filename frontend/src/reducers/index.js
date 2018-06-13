@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
   routing: routerReducer,
   source: resourceReducer('sources'),
   requirement: resourceReducer('requirements'),
-  requirementInstance: resourceReducer('requirementInstances')
+  testExecutions: resourceReducer('test_executions')
 });
 
 export default rootReducer;

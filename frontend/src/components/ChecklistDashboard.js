@@ -28,15 +28,15 @@ const statusDropdown = [
 export default ({ testExecution }) => {
   return (
     <div>
-      <ChecklistViz />
-      <Divider />
+      {/* <ChecklistViz />
+      <Divider /> */}
       <Menu text>
         <Menu.Item>
-          <Button primary>Export MECT Spreadsheet</Button>
+          <Button disabled primary>Export MECT Spreadsheet</Button>
         </Menu.Item>
         <Menu.Menu position='right'>
-          <Dropdown placeholder='Filter by Checklist' selection options={checklistDropdown}></Dropdown>
-          <Dropdown placeholder='Filter by Status' selection options={statusDropdown}></Dropdown>
+          <Dropdown disabled placeholder='Filter by Checklist' selection options={checklistDropdown}></Dropdown>
+          <Dropdown disabled placeholder='Filter by Status' selection options={statusDropdown}></Dropdown>
         </Menu.Menu>
       </Menu>
       <RequirementResult testExecution={testExecution}/>

@@ -8,6 +8,7 @@ export default function submitAction(name, url) {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {
+          'X-Key-Inflection': 'snake',
           'Content-Type': 'application/json'
         }
       };
@@ -27,5 +28,5 @@ export default function submitAction(name, url) {
         error
       });
     }
-  }
+  };
 }

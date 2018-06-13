@@ -1,66 +1,43 @@
 import React, { Component } from 'react';
-import {nest} from 'd3-collection';
+import { nest } from 'd3-collection';
 import _ from 'lodash';
 
-import { Container, Form, Grid, Icon, Segment } from 'semantic-ui-react';
-import RequirementResultDetail from './RequirementResultDetail';
+import { Container, Form, Grid, Icon, Segment, Divider } from 'semantic-ui-react';
+import RequirementResultDetail from './TestExecution/RequirementResultDetail';
+import ChecklistItem from './TestExecution/ChecklistItem';
 
 export default class RequirementResult extends Component {
   state = { visible: false }
 
   // TODO: Use the examples here to create conditional renders based on requirement status
-  // TODO: Fix the Requirement expansion so it only works on one requirement
 
   handleChange = (e, { name, value }) => this.setState({ [name]: value })
-
-  handleVisibility = () => this.setState({ visible: !this.state.visible })
-
   render() {
-
-    
-    const { visible } = this.state;
     if (!this.props.testExecution) {
       return null;
     }
-    const requirements = _.flatten(this.props.testExecution.validation_instances.map((d) => {
-      return d.validation.requirements.map((r) => {
-        return { requirement: r, validation_instance: d };
-      });
-    }));
-    const rolledRequirements = nest()
-      .key(r => r.requirement.checklist_id)
-      .entries(requirements);    
+    const { requirements, checklists, manual_testing, validations, validation_instances } = this.props.testExecution;
+    const checklistNames = _.keys(checklists);
+    const manualTesting = _.keyBy(manual_testing, m => m.id);
+    const requirementsByName = _.keyBy(requirements, r => r._id);
+    const validationsById = _.keyBy(validations, v => v._id);
+    const validationInstancesByValidation = _.keyBy(validation_instances, v => v.validation_id);
+    
     return (
       <div>
         <Container>
-          <h2 className='checklistTitle'>Checklist Title</h2>
-          <h3>Category</h3>
-          {rolledRequirements.map((r) => {
-            return (
-              <Segment key={r.key}>
-                <Grid>
-                  <Grid.Column width={1}>
-                    <Form.Button circular compact icon aria-label='Expand TA.BA.10' content={
-                      visible ? <Icon fitted name='chevron down' /> : <Icon fitted name='chevron right' />}
-                      onClick={this.handleVisibility}
-                    />
-                  </Grid.Column>
-                  <Grid.Column width={2}>{r.key}
-              </Grid.Column>
-                  <Grid.Column width={10}>
-                    {r.values[0].requirement.description}
-              </Grid.Column>
-                  <Grid.Column width={1}>
-                    <Icon name='remove circle' size='big' color='red' />
-                  </Grid.Column>
-                  <Grid.Column>
-                    Doesnt Meet
-              </Grid.Column>
-                </Grid>
-                {visible && r.values.map(v => <RequirementResultDetail key={v.validation_instance._id.$oid} validationInstance={v.validation_instance} requirement={v.requirement}/>)}
-              </Segment>
-            );
-          })}
+          {checklistNames.map(c =>
+            (<div>
+              <h2 className='checklistTitle'>{c}</h2>
+              {_.keys(checklists[c]).map(category => (
+                <div key={category}>
+                  <h3>{category}</h3>
+                  {checklists[c][category].map(r => <ChecklistItem key={r._id} failures={r.failures} validations={validationsById} validationInstances={validationInstancesByValidation} requirement={requirementsByName[r.requirement]} manualTesting={manualTesting[r.requirement]}/>)}
+                  <Divider />
+                  </div>
+              ))}
+            </div>)
+          )}
           {/* <Segment color='red'>
             <Grid columns='equal' verticalAlign='middle'>
               <Grid.Column width={1}>

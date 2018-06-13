@@ -59,8 +59,8 @@ class RequirementInstancesController < ApplicationController
 
   # POST /requirement_instances
   def create
-    tests = requirement_instance_params[:tests]
-    url = requirement_instance_params[:url]
+    tests = params[:requirement_instance][:tests]
+    url = requirement_instance_params[:server_url]
     requirements = []
     validations = []
     tests.each do |t|
@@ -70,7 +70,8 @@ class RequirementInstancesController < ApplicationController
     end
     validations = validations.flatten
     requirements = requirements.flatten
-    @requirement_instance = RequirementInstance.create()
+    puts requirement_instance_params
+    @requirement_instance = RequirementInstance.create(requirement_instance_params)
     validations.each do |v|
       ValidationInstance.create!(
         url: url,
@@ -125,7 +126,7 @@ class RequirementInstancesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def requirement_instance_params
-    params.fetch(:requirement_instance, {})
+    params.require(:requirement_instance).permit(:server_url, :server_name)
   end
 
 end

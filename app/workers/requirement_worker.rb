@@ -11,9 +11,10 @@ class RequirementWorker
       rescue => exception
         v.state =  'error'
         v.save
-      end
-      
+      end  
 
     end
+    @instance.set_state()
+    @instance.save
   end
 end
