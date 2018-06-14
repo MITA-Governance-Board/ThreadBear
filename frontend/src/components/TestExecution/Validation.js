@@ -13,8 +13,6 @@ export default ({ validation, validationInstance, failures }) => {
                     {validation.id}
                 </Grid.Column>
                 <Grid.Column>
-                    <strong>Result:</strong> {validationInstance.state}
-                    <br />
                     <strong>Expected Result:</strong> {validation.expected_result}
                     <br />
                     <strong>Alternative Evidence:</strong> {validation.alternative_evidence || 'None Defined'}
