@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { push } from 'react-router-redux';
+import { go } from 'react-router-redux';
 
 import _ from 'lodash';
 
@@ -19,6 +19,7 @@ import {
 import Header from '../components/Header';
 import submitFormAction from '../actions/submitFormAction';
 import resourceAction from '../actions/resourceAction';
+import withRouter from 'react-router-dom/withRouter';
 
 // const mectVersions = [
 //   { key: 'MECT 2.2', value: 'MECT 2.2', text: 'MECT 2.2' }
@@ -47,7 +48,7 @@ class NewTestContainer extends Component {
     this.props.submitNewTest(
       { requirement_instance: this.state },
       (data, dispatch) => {
-        dispatch(push('/'));
+        this.props.history.push(`/test/${data._id.$oid}`);
       }
     );
   }
@@ -136,4 +137,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewTestContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NewTestContainer));

@@ -44,8 +44,9 @@ before_action :set_requirement_instance, only: [:show]
                 test_exec.manual_testing << {id: r.id, testing: r.additional_manual_testing}
                 test_exec.sources << r.sources
                 validations << vi.validation
+                test_exec.tags << r.checklist
+
             end
-            test_exec.tags << vi.validation.tags
             test_exec.validations = validations
         end
         test_exec.validation_instances = requirement_instance.validation_instances
