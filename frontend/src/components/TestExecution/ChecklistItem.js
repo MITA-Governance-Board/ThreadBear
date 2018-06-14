@@ -15,7 +15,7 @@ export default class ChecklistItem extends Component {
 
     render() {
       const { visible } = this.state;
-      const { requirement, failures = [], validations, validationInstances, manualTesting } = this.props;
+      const { requirement, failures = [], validations, validationInstances, manualTesting, sources } = this.props;
 
       const requirementValidations = requirement.validation_ids.map(id => validations[id]);
       const requirementValidationInstances = requirement.validation_ids.map(id => validationInstances[id]);
@@ -42,7 +42,7 @@ export default class ChecklistItem extends Component {
                         <StatusIcon failures={failures} />
                     </Grid.Column>
                 </Grid>
-                {visible && <RequirementResultDetail requirement={requirement} validations={requirementValidations} failures={failuresByValidationInstance} validationInstances={requirementValidationInstances} manualTesting={manualTesting} />}
+                {visible && <RequirementResultDetail requirement={requirement} validations={requirementValidations} failures={failuresByValidationInstance} validationInstances={requirementValidationInstances} manualTesting={manualTesting} sources={sources}/>}
             </Segment>
       );
     }

@@ -7,7 +7,7 @@ class RequirementWorker
 
     @instance.validation_instances.each do |v| 
       begin
-        "#{v.validation._id}_Validation".constantize.new('http://testing.psm.solutionguidance.com:8080/cms/fhir', v._id).run()  
+        "#{v.validation._id}_Validation".constantize.new(@instance.server_url, v._id).run()  
       rescue => exception
         v.state =  'error'
         v.save

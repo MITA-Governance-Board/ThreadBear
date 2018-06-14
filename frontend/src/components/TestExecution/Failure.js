@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Icon, Container, Divider, Header } from 'semantic-ui-react';
+import _ from 'lodash';
 
 
 export default ({ failure }) => {
@@ -16,7 +17,7 @@ export default ({ failure }) => {
       <Icon name='remove circle' size='large' color='red' />
     </Grid.Column>
     <Grid.Column width={2}>
-      {failure.severity}
+        {_.capitalize(failure.severity)}
     </Grid.Column>
   </Grid.Row>
 

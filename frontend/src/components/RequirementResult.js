@@ -16,13 +16,13 @@ export default class RequirementResult extends Component {
     if (!this.props.testExecution) {
       return null;
     }
-    const { requirements, checklists, manual_testing, validations, validation_instances } = this.props.testExecution;
+    const { requirements, checklists, manual_testing, validations, validation_instances, sources } = this.props.testExecution;
     const checklistNames = _.keys(checklists);
     const manualTesting = _.keyBy(manual_testing, m => m.id);
     const requirementsByName = _.keyBy(requirements, r => r._id);
     const validationsById = _.keyBy(validations, v => v._id);
     const validationInstancesByValidation = _.keyBy(validation_instances, v => v.validation_id);
-      
+    const sourcesById = _.keyBy(sources, s => s._id);
     return (
       <div>
         <Container>
@@ -32,7 +32,7 @@ export default class RequirementResult extends Component {
               {_.keys(checklists[c]).map(category => (
                 <div key={category}>
                   <h3>{category}</h3>
-                  {checklists[c][category].map(r => <ChecklistItem key={r._id} failures={r.failures} validations={validationsById} validationInstances={validationInstancesByValidation} requirement={requirementsByName[r.requirement]} manualTesting={manualTesting[r.requirement]}/>)}
+                  {checklists[c][category].map(r => <ChecklistItem key={r._id} failures={r.failures} validations={validationsById} validationInstances={validationInstancesByValidation} requirement={requirementsByName[r.requirement]} manualTesting={manualTesting[r.requirement]} sources={sourcesById}/>)}
                   <Divider />
                   </div>
               ))}
