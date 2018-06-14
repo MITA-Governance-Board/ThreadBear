@@ -10,7 +10,7 @@ import resourceAction from '../actions/resourceAction';
 // TODO: Convert to Link and render as text if s.url doesn't exist
 
 class Sources extends Component {
-  componentWillUpdate() {
+  componentDidMount() {
     this.props.listSources();
   }
 

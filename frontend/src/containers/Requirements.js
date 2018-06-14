@@ -10,7 +10,7 @@ import Header from '../components/Header';
 import resourceAction from '../actions/resourceAction';
 
 class Requirements extends Component {
-  componentWillUpdate() {
+  componentDidMount() {
     this.props.listRequirements();
   }
 
