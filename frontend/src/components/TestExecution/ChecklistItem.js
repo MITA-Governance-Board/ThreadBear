@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Form, Grid, Icon, Segment } from 'semantic-ui-react';
 
+import { nest } from 'd3-collection';
+
 import Validation from './Validation';
 import StatusIcon from './StatusIcon';
 import RequirementResultDetail from './RequirementResultDetail';
@@ -13,16 +15,17 @@ export default class ChecklistItem extends Component {
 
     render() {
       const { visible } = this.state;
-      const { requirement, failures, validations, validationInstances, manualTesting } = this.props;
-    
+      const { requirement, failures = [], validations, validationInstances, manualTesting } = this.props;
+
       const requirementValidations = requirement.validation_ids.map(id => validations[id]);
-      const requirementValidationInstances = requirement.validation_ids.map(id => validationInstances[id])
-     
+      const requirementValidationInstances = requirement.validation_ids.map(id => validationInstances[id]);
+      const failuresByValidationInstance = nest().key(f => f.validation_instance_id.$oid).object(failures);
+      
       return (
             <Segment>
                 <Grid>
                     <Grid.Column width={1}>
-                    {/* TODO: correct aria */}
+                        {/* TODO: correct aria */}
                         <Form.Button circular compact icon aria-label='Expand TA.BA.10' content={
                             visible ? <Icon fitted name='chevron down' /> : <Icon fitted name='chevron right' />}
                             onClick={this.handleVisibility}
@@ -39,7 +42,7 @@ export default class ChecklistItem extends Component {
                         <StatusIcon failures={failures} />
                     </Grid.Column>
                 </Grid>
-                {visible && <RequirementResultDetail requirement={requirement} validations={requirementValidations} failures={failures} validationInstances={requirementValidationInstances} manualTesting={manualTesting}/>}
+                {visible && <RequirementResultDetail requirement={requirement} validations={requirementValidations} failures={failuresByValidationInstance} validationInstances={requirementValidationInstances} manualTesting={manualTesting} />}
             </Segment>
       );
     }

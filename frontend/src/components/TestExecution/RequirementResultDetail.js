@@ -11,7 +11,7 @@ export default ({ validations, requirement, validationInstances, manualTesting, 
       <Container>
         <Divider />
         <Header as='h3' textAlign='center'>Automated Tests</Header>
-          {validations.map((v, i) => <Validation validation={v} validationInstance={validationInstances[i]} failures={failures[validationInstances[i]._id]}/>)}
+          {validations.map((v, i) => <Validation validation={v} validationInstance={validationInstances[i]} failures={failures}/>)}
         <Header as='h3' textAlign='center'>Additional Manual Testing Required</Header>
         {manualTesting ? manualTesting.testing : 'None Defined'}
         <Divider />

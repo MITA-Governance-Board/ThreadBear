@@ -22,7 +22,7 @@ export default class RequirementResult extends Component {
     const requirementsByName = _.keyBy(requirements, r => r._id);
     const validationsById = _.keyBy(validations, v => v._id);
     const validationInstancesByValidation = _.keyBy(validation_instances, v => v.validation_id);
-    
+      
     return (
       <div>
         <Container>
