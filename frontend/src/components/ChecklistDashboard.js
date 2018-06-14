@@ -28,8 +28,8 @@ const statusDropdown = [
 export default ({ testExecution }) => {
   return (
     <div>
-      <ChecklistViz />
-      <Divider />
+      {/* <ChecklistViz />
+      <Divider /> */}
       <Menu text>
         <Menu.Item>
           <Button disabled primary>Export MECT Spreadsheet</Button>
