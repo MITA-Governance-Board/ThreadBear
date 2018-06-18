@@ -16,8 +16,14 @@ class PS_OName_Validation < ValidationSuiteBase
     end
     
   end
+    # TODO: Failure: no response from the FHIR server
+    # TODO: Failure: no provider screening applications exist
+    # TODO: Failure: no PS apps for Organizations exist
+    # TODO: Failure: a PS app for an Organization exists with no name
 
-  # validation 'Load Tasks' do
-  #   assert_equal(2,3, "Apparently, you need to change the value of 2...")
-  # end
+    response.resource.entry.each do |app|
+      next unless app.resource.contained.first.resourceType == 'Organization'
+      app.resource.contained.first.name.present? ? 'yay' : 'no'
+    end
+  end
 end
